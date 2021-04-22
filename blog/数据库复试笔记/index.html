@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+  <title>zhouhai</title>
+
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Website title" />
+<meta name="author" content="zhou hai" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.57.1" />        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">        <link rel="manifest" href="site.webmanifest">        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="favicon.ico">        
+
+
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+  <link rel="stylesheet" href="/css/aafu_pinkish.css" />
+  <link rel="stylesheet" href="/css/aafu.css" />
+
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = () => {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+    window.onresize = () => {
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+  </script>
+</head>
+<body class="container">
+    <main style="min-height: calc(100vh - 60px);">
+      <div class="d-flex flex-row row p-2">
+  <h3 class="main-menu mr-3">
+    <a href="">Home</a>
+  </h3>
+  <h3 class="main-menu mr-3">
+    <a href="/blog">Blog</a>
+  </h3>
+</div>
+
+<div class="rounded p-2 aafu-border border">
+  <div class="border-bottom aafu-border">
+    <h1 class="top-h1" style="font-size: 2.75em;">数据库复试笔记</h1><div class="mb-2">
+  <p class="mb-1">April 22, 2021</p>
+   
+  
+  <p class="metadata-value mb-1 taxa taxa-container-div list-categories">
+    Categories: 
+    <a
+      class="pl-1 pr-1 rounded border border-secondary"
+      href="/categories/%E8%80%83%E7%A0%94"
+      title="categories"
+    >考研</a>
+    
+    <a
+      class="pl-1 pr-1 rounded border border-secondary"
+      href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93"
+      title="categories"
+    >数据库</a>
+    
+  </p>
+  
+  
+  
+  <p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+    Tags: 
+    <a
+      class="pl-1 pr-1 rounded border border-secondary"
+      href="/tags/%E8%80%83%E7%A0%94"
+      title="tags"
+    >考研</a>
+    
+    <a
+      class="pl-1 pr-1 rounded border border-secondary"
+      href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93"
+      title="tags"
+    >数据库</a>
+    
+    <a
+      class="pl-1 pr-1 rounded border border-secondary"
+      href="/tags/%E7%AC%94%E8%AE%B0"
+      title="tags"
+    >笔记</a>
+    
+  </p>
+  
+  
+</div>
+</div>
+  
+
+<h1 id="关系数据理论">关系数据理论</h1>
+
+<p>数据依赖：函数依赖和多值依赖</p>
+
+<p>关系模式存在的问题：①数据冗余②更新异常③插入异常④删除异常</p>
+
+<h2 id="规范化">规范化</h2>
+
+<h3 id="函数依赖">函数依赖</h3>
+
+<p>定义：若对于R（U）——关系模式的属性集中的任意一个关系r，r中不可能存在两个元祖在X上属性值相等而在Y上缺不相等，则可称为X函数确定于Y，Y函数依赖于X</p>
+
+<p><font color='red'>*此处的函数依赖不分特殊情况，任意时刻、全部关系都需满足`</font></p>
+
+<h4 id="术语和记号">术语和记号：</h4>
+
+<p>非平凡的函数依赖：X确定于Y，但Y并非X的子集</p>
+
+<p>平方的函数依赖：X确定于Y且Y为X的子集</p>
+
+<p>X确定于Y，则称X为此函数依赖中的<font color='red'>决定因素</font>&gt;</p>
+
+<p>完全函数依赖：只有X属性集全部集合才可以确定Y，任一子集都不可</p>
+
+<p>X（F）Y</p>
+
+<p>部分函数依赖：X属性集中存在着子集也可确定Y</p>
+
+<p>X（P）Y</p>
+
+<p>传递函数依赖：X可确定Y，且为非平凡函数依赖，Y可确定于Z，也为非平凡函数依赖，则可称X确定Z</p>
+
+<h4 id="码">码：</h4>
+
+<p>候选码：若U完全依赖于K，则K为关系R的候选码</p>
+
+<p>超码：若U部分依赖于K，则K为关系R的超码</p>
+
+<p><font color='red'>*候选码是最小的超码，K的任一子集都不会为候选码</font></p>
+
+<p>主码：若候选码唯一则直接为主码，若大于一个则可以选定其中一个</p>
+
+<p>主属性：任何一个候选码中的属性都为主属性</p>
+
+<p>非主属性（非码属性）：非候选码的属性</p>
+
+<p><font color='red'>若整个属性都为候选码则可称为全码</font></p>
+
+<p>外码：R中属性非X中的码，但X为另一个关系模式的码，则X称为外码</p>
+
+<h4 id="规范化层级">规范化层级</h4>
+
+<p>1NF,2NF,3NF,BCNF,4NF.5NF</p>
+
+<h5 id="1nf">1NF</h5>
+
+<p>每一个分量必须是不可分的数据项</p>
+
+<h5 id="2nf">2NF</h5>
+
+<p>在1NF的基础上，且每一个非主属性都<font color='red'>完全函数依赖于</font>任何一个候选码</p>
+
+<p>不属于2NF会导致的问题：</p>
+
+<p>①插入异常</p>
+
+<p>②删除异常</p>
+
+<p>③修改复杂</p>
+
+<h5 id="3nf">3NF</h5>
+
+<p>每一个非主属性既不传递依赖于码，也不部分依赖于码</p>
+
+<h5 id="bcnf">BCNF</h5>
+
+<p>在关系模式中，若每一个决定因素都包含码，则可为BCNF</p>
+
+<p>结论：</p>
+
+<p>①所有非主属性对每一个码都是完全函数依赖</p>
+
+<p>②所有主属性对每一个不包含它的码也是完全函数依赖</p>
+
+<p>③没有任何属性完全函数依赖于非码的任何一组属性</p>
+
+<p>规范化小结：</p>
+
+<p>1NF（消除非主属性对码的部分函数依赖）</p>
+
+<p>2NF（消除非主属性对码的传递函数依赖）</p>
+
+<p>3NF（消除主属性对码的部分和传递函数依赖）</p>
+
+<p>BCNF（消除非平凡且非函数依赖的多值依赖）</p>
+
+<p>4NF</p>
+
+<h2 id="数据依赖的公理系统">数据依赖的公理系统</h2>
+
+<p>逻辑蕴涵：一组函数依赖F在关系模式R中，任意一个关系r都可以确定X确定于Y，则可称F逻辑蕴涵于X确定于Y</p>
+
+<h3 id="armstrong公理系统推理规则">Armstrong公理系统推理规则：</h3>
+
+<p>R为关系模式，U为属性集总体，F为一组函数依赖</p>
+
+<p>A1——自反律：X确定于Y为平凡函数依赖，则X确定于Y为F所蕴涵</p>
+
+<p>A2——增广律：若X确定Y为F所蕴涵，则XZ确定YZ也为F所蕴涵</p>
+
+<p>A3——传递律：若X确定Y，而Y确定Z均为F所蕴涵，则X确定Z也为F所蕴涵</p>
+
+<p>由A1,A2,A3可推出：</p>
+
+<p>①合并规则：X确定Y，X确定Z，则X确定YZ</p>
+
+<p>②伪传递规则：X确定Y，WY确定Z，XW确定Z</p>
+
+<p>③分解规则：X确定Y，且Z为Y的子集，则X确定Z</p>
+
+<p>闭包：F所逻辑蕴涵的函数依赖的全体为F的闭包（记为F+）</p>
+
+<p>Armstrong公理的有效性指：由F出发根据Armstrong公理推导的每一个函数依赖一定在F+中</p>
+
+<p>完备性：F+中的每一个函数依赖，必定可以由F出发根据Armstrong公理推导出来</p>
+
+<p>X确定A能由F根据Armstrong公理导出，则称X（F）+为属性集X关于函数依赖集F的闭包</p>
+
+<p>算法6.1：</p>
+
+<p>找出初始给定的属性集X，在F中找出左边为X的子集所确定的集合，再合并起来成一个新的属性集</p>
+
+<p>若F+=G+，则F与G等价</p>
+
+<p>最小依赖集（最小覆盖）F(m)：</p>
+
+<p>①F中任一函数依赖的右部仅含有一个属性</p>
+
+<p>②F中不存在F与F-X确定A等价（即不存在着与其它函数依赖闭包重复的函数依赖）</p>
+
+<p>③F中不存在X确定A，X有真子集Z使得F-X确定A并Z确定A等价F（即不存在着可由其子集来替代的函数依赖闭包）</p>
+
+<p>找出最小依赖集：</p>
+
+<p>①将F中所有函数依赖的右边化为单一属性</p>
+
+<p>②去掉F中所有函数依赖左边的冗余属性</p>
+
+<p>③去掉F中所有冗余的函数依赖</p>
+
+<h2 id="模式分解">模式分解</h2>
+
+<p>三个定义：</p>
+
+<p>①无损连接性</p>
+
+<p>②保持函数依赖</p>
+
+<p>③即有无损连接性，又要具有无损连接性</p>
+
+<p>分解至3NF的模式分解算法：</p>
+
+<p>合成法（可保持函数依赖）：</p>
+
+<p>①对关系模式R中的函数依赖集F进行“极小化处理”</p>
+
+<p>②找出所有不在F中出现的属性（记做U0），将U0牵引出的属性也一并从U中去掉</p>
+
+<p>③若其中能找出X确定于A为F所蕴涵，且XA=U，则算法终止</p>
+
+<p>④否则，对F按具有相同的左部的原则分组，每一组函数依赖所涉及的属性构成Ui，若Ui为其它Uj的子集则去除。此时，所有的Ri均为3NF</p>
+
+<p>转换为3NF即有无损连接性又保持函数依赖性的模式分解：</p>
+
+<p>①在合成法的基础上，已将R分解成保持函数依赖的3NF，设X为原先R的码，则构建一个新的集合C为P并上X在R中的关系模式</p>
+
+<p>②若存在Ui为X子集或反之，则将X在R中的关系模式去除</p>
+
+<p>③C就位既有无损连接性又保持函数依赖性的模式分解</p>
+
+<p>模式分解推论：</p>
+
+<p>①分解保持函数依赖就满足3NF</p>
+
+<p>②分解即有无损连接线又保持函数依赖，可3NF，但不一定BCNF</p>
+
+<p>③分解具有无损连接线，则可4NF</p>
+
+<h1 id="u-数据库设计-u"><u>数据库设计</u></h1>
+
+<h2 id="概述">概述</h2>
+
+<p>​   数据库设计：构造优化的数据库逻辑模式和物理结构，并据此建立数据库及应用系统，使之能够有效地存储和管理数据，满足各种用户的应用需求，包括信息管理要求和数据操作要求。</p>
+
+<p>步骤：需求分析；概念结构分析；逻辑结构分析；物理结构分析；数据库实施；数据库运行和维护</p>
+
+<p>数据字典：数据项；数据结构；数据流；数据存储；处理过程；</p>
+
+<h2 id="概论设计-e-r图">概论设计（E-R图）</h2>
+
+<p>​   矩形：实体；椭圆：属性；菱形：关系（大部分均为强实体）</p>
+
+<p>​   *：双矩形代表着实体为弱实体，对应的关系也为弱关系&ndash;双菱形表示</p>
+
+<p>​   *：弱实体拥有完全的依靠性</p>
+
+<p>​   实体间的联系分为三类：1:1;1:n;m:n;</p>
+
+<p>​   联系的度：n个实体间的联系度就为n(n&gt;=2)</p>
+
+<p>​   拓展的E-R图：</p>
+
+<p>​       ISA联系:</p>
+
+<p>​                   (1)分类属性：存在父类与子类</p>
+
+<p>​                （2）不相交约束和可重叠约束:父类的一个实体不可为子类的重叠</p>
+
+<p>​                （3）完备性约束：倘若父类的实体完全是某一子类实体&ndash;完全特化（双线）；若有超出&ndash;部分特化（单线）</p>
+
+<p>​               基数约束：数字针对的关系联接的另一实体</p>
+
+<p>​               Part-of联系：强弱实体型</p>
+
+<p>​   设计准则：①属性不可再被描述②属性不能与其它实体具有联系</p>
+
+<p>​   E-R图间的冲突：①属性冲突：值的冲突②命名冲突③结构冲突：不同E-R图对于同一对象的定义结构不同</p>
+
+<p>​   E-R图设计的步骤：①从分E-R图中进行合并②消除冲突和冗余（可采用规划化理论）</p>
+
+<p>*联系也可以拥有属性</p>
+
+<h2 id="逻辑设计">逻辑设计</h2>
+
+<p>E-R图向关系模型转换：①一个实体型可直接转化为一个关系模式②1:1；1：n；n:m均可转化成关系模式③拥有相同码的关系模式可合并</p>
+
+<p>模型优化：①数据依赖②消除冗余③分析范式④环境分析⑤分解：水平分解&ndash;对元祖本身分解为小元祖；垂直分解：将属性分解为若干子集合</p>
+
+<h2 id="物理设计">物理设计</h2>
+
+<p>对数据库进行物理结构确定及评价：运行评率和性能要求</p>
+
+<p>存取方式：索引方式（B+和Hash）和聚簇（集中存放）</p>
+
+<p>*一个基本表只能建立一个聚簇</p>
+
+<h1 id="数据库完整性">数据库完整性</h1>
+
+<p>定义：指数据的正确性、相容性（为了防止数据库中存在不符合语义的数据）</p>
+
+<p>为进行数据库完整性所需的机制：</p>
+
+<p>1.提供定义完整性约束条件的机制（实体完整性、参照完整性、用户定义完整性）</p>
+
+<p>2.提供完整性检查的方法</p>
+
+<p>3.进行违约处理（NO ACTION拒绝操作、CASCADE级联处理）</p>
+
+<h2 id="实体完整性">实体完整性</h2>
+
+<h3 id="定义">定义：</h3>
+
+<p>有两种约束方法：1.列级约束条件&ndash;在定义行后直接定义 2.表级约束条件——在建表最后</p>
+
+<p>二者之间的区别：</p>
+
+<p><font color='red'>列级约束条件只可适用于码为单属性的关系模型</font></p>
+
+<p><font color='red'>表级约束条件无论码为多属性或单属性都可以</font></p>
+
+<h3 id="检查和违约处理">检查和违约处理：</h3>
+
+<p>①检查主码值是否唯一</p>
+
+<p>②检查主码的各个属性是否为空</p>
+
+<p><font color='red'>一般为了提高效率，通常采用B+树（理论上来说是B-树，关键字和分支为n:n+1）索引</font></p>
+
+<h2 id="参照完整性">参照完整性</h2>
+
+<h3 id="定义-1">定义：</h3>
+
+<p>找出关系模式中为外码的属性并定义</p>
+
+<p>格式为：foreign key(xx) references xx(xx)</p>
+
+<h3 id="检查和违约处理-1">检查和违约处理：</h3>
+
+<p>有四种可能会破坏参照完整性的情况：</p>
+
+<p>①主表中增加一个元祖，但在另一个表中，外码的属性找不到一个相同的元祖值</p>
+
+<p>②主表中修改一个元祖，但在另一个表中，外码的属性找不到一个相同的元祖值</p>
+
+<p>③外码表中删除一个元祖，但在主表中，外码的属性找不到一个相同的元祖值</p>
+
+<p>④外码表中修改一个元祖，但在主表中，外码的属性找不到一个相同的元祖值</p>
+
+<p><font color='red'>在主表中删除是不影响的，在外码表中增加同样也是不影响的</font></p>
+
+<p>处理策略：</p>
+
+<p>①NO ACTION拒绝该操作</p>
+
+<p>②CASCADE级联操作——将所有影响到参照完整性的数据都变动</p>
+
+<p>③设置为空值</p>
+
+<p>拒绝：on xxx(操作类型,insert——只针对主表，update——两个表都可以，delete——只针对副表)  no action</p>
+
+<p>级联：on xxx(操作类型,insert——只针对主表，update——两个表都可以，delete——只针对副表)  cascade</p>
+
+<p>设空: on xxx(操作类型,insert——只针对主表，update——两个表都可以，delete——只针对副表) set null</p>
+
+<h2 id="用户定义的完整性">用户定义的完整性：</h2>
+
+<h3 id="定义-2">定义：</h3>
+
+<p>①不允许空值 not null</p>
+
+<p>②列值唯一 union</p>
+
+<p>③用check指定列值应该满足的条件</p>
+
+<p>check（）后面可以跟语句表达式</p>
+
+<h3 id="属性或元祖检查和违约处理">属性或元祖检查和违约处理:</h3>
+
+<p>在插入或修改元祖的值时就会进行检查，若违约则直接拒绝操作</p>
+
+<p><font color='red'>属性级的约束为列级约束</font></p>
+
+<p><font color='red'>元祖级的为表级约束</font></p>
+
+<h2 id="完整性约束命名子句-便于对约束进行一统操作">完整性约束命名子句（便于对约束进行一统操作）：</h2>
+
+<p>定义：constraint&lt;完整性约束条件名&gt;&lt;完整性约束条件&gt;</p>
+
+<p>在条件中可以书写not null、unique、primary key、foreign key、check</p>
+
+<p><font color='red'>*修改表中完整性约束</font></p>
+
+<p>对于完整性约束不存在修改</p>
+
+<p>因此只能先删除再添加 drop、add</p>
+
+<h2 id="断言">断言：</h2>
+
+<h3 id="断言的意义">断言的意义：</h3>
+
+<p>声明性断言具有一般性约束，通常用于多表连接和聚集等复杂操作</p>
+
+<h3 id="创建断言的语句格式">创建断言的语句格式：</h3>
+
+<p>create assertion&lt;断言名&gt;<check子句></p>
+
+<p>drop assertion&lt;断言名&gt;</p>
+
+<h2 id="触发器">触发器：</h2>
+
+<h3 id="定义-3">定义：</h3>
+
+<p>create trigger&lt;触发器名&gt;</p>
+
+<p>{before|after}&lt;触发事件&gt;on&lt;表名&gt;</p>
+
+<p>referencing new|old row as&lt;变量&gt;</p>
+
+<p>for each{row|statement}</p>
+
+<p>[when&lt;触发条件&gt;]&lt;触发动作体&gt;</p>
+
+<h3 id="规则">规则：</h3>
+
+<p>①只有表的拥有者才可以在表上创建触发器且有数量限制</p>
+
+<p>②在同一模式下，触发器的名字是唯一的</p>
+
+<p>③触发器只能定义在基本表中，不可用于临时表——视图之类的</p>
+
+<p>④触发事件：可为类型的单个体也可为组合体</p>
+
+<p>⑤触发器类型：行级触发器（每执行一次触发事件就触发）、语句级触发器（待全部事件执行完再触发）</p>
+
+<p>⑥触发条件：当when存在时，条件为真才执行。若不存在when触发器被激活后立刻执行</p>
+
+<p>⑦触发动作体：可以是一个匿名pl\sql过程块，也可是对已存在的过程块调用</p>
+
+<h3 id="触发器激活顺序">触发器激活顺序：</h3>
+
+<p>①执行该表上的before触发器</p>
+
+<p>②激活触发器的sql语句</p>
+
+<p>③执行该表上的after触发器</p>
+
+<p>若为同一类型遵循“FIFO”</p>
+
+<h3 id="删除触发器">删除触发器：</h3>
+
+<p>drop trigger&lt;触发器名&gt;on&lt;表名&gt;</p>
+
+<h1 id="关系数据库标准语言sql">关系数据库标准语言SQL</h1>
+
+<h2 id="概述-1">概述</h2>
+
+<h3 id="特点">特点</h3>
+
+<p>综合统一、高度过程化、面向集合的操作方式、以同一语法结构提供多种使用方式、语言简洁，易学易用</p>
+
+<h3 id="三级模式">三级模式：</h3>
+
+<p>①内模式：基本存储文件</p>
+
+<p>②模式：基本表</p>
+
+<p>③外模式：视图</p>
+
+<h2 id="定义-4">定义</h2>
+
+<h3 id="模式">模式</h3>
+
+<h4 id="定义-5">定义</h4>
+
+<p>create schema&lt;模式名&gt;authorization&lt;用户名&gt;</p>
+
+<p>[&lt;表定义子句&gt;&lt;视图定义子句&gt;&lt;授权定义子句&gt;];</p>
+
+<h4 id="删除">删除</h4>
+
+<p>drop schema&lt;模式名&gt;<cascade|restrict></p>
+
+<h3 id="基本表">基本表</h3>
+
+<h4 id="定义-6">定义</h4>
+
+<p>create table &lt;表名&gt;(&lt;列名&gt;&lt;数据类型&gt;&lt;列级完整性约束&gt;)&lt;表级完整性约束&gt;</p>
+
+<h4 id="常用数据类型">常用数据类型</h4>
+
+<p>char——定长、varchar——变长、clob——字符串大对象、blob——二进制大对象、numeric（p,d）——p为整数数字位，d为小数数字位</p>
+
+<h4 id="修改">修改</h4>
+
+<p>alter table&lt;表名&gt;</p>
+
+<p>[add [column]&lt;列名&gt;&lt;数据类型&gt;[完整性约束]]</p>
+
+<p>[add&lt;表级完整性约束&gt;]</p>
+
+<p>[drop constraint&lt;完整性约束名&gt;[restrict|cascade]]</p>
+
+<p>[drop [column]&lt;列名&gt;[restrict|cascade]]</p>
+
+<p>[alter column &lt;列名&gt;&lt;完整性约束&gt;];</p>
+
+<h4 id="删除-1">删除</h4>
+
+<p>drop table&lt;表名&gt;[restrict|cascade];</p>
+
+<h3 id="索引">索引</h3>
+
+<h4 id="建立">建立</h4>
+
+<p>create [unique] [cluster] index &lt;索引名&gt;</p>
+
+<p>on &lt;表名&gt;(&lt;列名&gt;[&lt;次序&gt;])</p>
+
+<p><font color='red'>unique——代表的是一一对应索引；cluster——代表聚簇索引..区别在于调用主内存块的次数不同</font></p>
+
+<h4 id="修改-只可以改名字">修改——只可以改名字</h4>
+
+<p>alter index&lt;旧索引名&gt;rename to &lt;新索引名&gt;</p>
+
+<h4 id="删除-2">删除</h4>
+
+<p>drop index&lt;索引名&gt;</p>
+
+<h2 id="查询">查询</h2>
+
+<p>一般格式：</p>
+
+<p>select [all|distinct]&lt;目标列表达式&gt;</p>
+
+<p>from&lt;表名或视图名&gt;[可为派生表——select语句 [as] 别名]</p>
+
+<p>[where &lt;条件表达式&gt;]</p>
+
+<p>[group by &lt;列名1&gt;[having&lt;条件表达式&gt;]]</p>
+
+<p>[order by&lt;列名2&gt; [asc|desc]]</p>
+
+<p><font color='red'>聚集函数只可搭配having使用，不可使用where</font></p>
+
+<h3 id="单表查询">单表查询</h3>
+
+<p>select&lt;列名&gt; from &lt;表名&gt;;</p>
+
+<h4 id="常用查询条件">常用查询条件</h4>
+
+<p>比较：&gt;、&lt;、=、&gt;=,&lt;=,!=,&lt;&gt;,!&gt;,!&lt;</p>
+
+<p>确定范围：between and,not between and(左闭右闭)</p>
+
+<p>确定和:in,not in</p>
+
+<p>字符匹配：like,not like</p>
+
+<p>空值:is null,is not null</p>
+
+<p>多重条件:and,or,not</p>
+
+<p>特殊谓词:exist,not exist——此为布尔类型，后跟查询语句，有元祖返回即为true，无即为false</p>
+
+<h4 id="聚集函数">聚集函数</h4>
+
+<p>count(*)——统计元祖个数</p>
+
+<p>count(distinct|all&lt;列名&gt;)——统计一列中有多少值的个数</p>
+
+<p>sum(distinct|all&lt;列名&gt;)——对该列的值进行求和</p>
+
+<p>avg(distinct|all&lt;列名&gt;)——对该列的值求平均</p>
+
+<p>max(distinct|all&lt;列名&gt;)——对该列的值求最大</p>
+
+<p>min(distinct|all&lt;列名&gt;)——对该列的值求最小</p>
+
+<h3 id="连接查询">连接查询</h3>
+
+<p>等值查询——连接运算符为=</p>
+
+<p>非等值查询——连接运算符为其它</p>
+
+<p>自然连接——把等值连接中的重复属性列去除</p>
+
+<h4 id="自连接">自连接</h4>
+
+<p>select &lt;别名1&gt;.&lt;列名&gt;,&lt;别名2&gt;.&lt;列名&gt;</p>
+
+<p>from &lt;表&gt; &lt;别名1&gt;，&lt;表&gt;&lt;别名2&gt;</p>
+
+<p>[where&hellip;]</p>
+
+<h4 id="外连接">外连接</h4>
+
+<p>select &lt;列名&gt;</p>
+
+<p>from &lt;表1&gt; [[left|right||full] outer join] &lt;表2&gt; on(条件)</p>
+
+<p>左外连接——表1中对应条件，表2无自动补null</p>
+
+<p>右外连接——表2中对应条件，表1无自动补null</p>
+
+<p>全外连接——前两者结合</p>
+
+<h4 id="多表连接">多表连接</h4>
+
+<p>多表连接的条件一般为两两之间的共同属性等值</p>
+
+<h4 id="嵌套查询">嵌套查询</h4>
+
+<p>条件内为子查询</p>
+
+<h5 id="1-带有in谓词的子查询">1.带有in谓词的子查询</h5>
+
+<p>in表示一个范围，只要满足一个即为true</p>
+
+<p>不相关查询——子查询的查询条件不依赖于父查询</p>
+
+<p>相关子查询——子查询的查询条件依赖于父查询</p>
+
+<h5 id="2-带比较运算符的子查询">2.带比较运算符的子查询</h5>
+
+<h5 id="3-带有any-some-或all谓词的子查询">3.带有ANY(SOME)或ALL谓词的子查询</h5>
+
+<p>4.带有EXIST谓词的子查询</p>
+
+<h4 id="集合查询">集合查询</h4>
+
+<p>UNION连接——多个集合结果的并集</p>
+
+<p>INTERSECT——多个集合结果的交集</p>
+
+<p>EXCEPT——多个集合结果的差集</p>
+
+<h3 id="更新">更新</h3>
+
+<p>insert into&lt;表名&gt;(&lt;属性列&gt;)</p>
+
+<p>values(&lt;值&gt;);</p>
+
+<p><font color='red'>还有一种特殊情况：</font></p>
+
+<p>insert into&lt;表名&gt;(&lt;属性列&gt;)</p>
+
+<p>子查询；——属性列必须一一对应</p>
+
+<p>update&lt;表名&gt;</p>
+
+<p>set &lt;列名&gt;</p>
+
+<p>[where&hellip;]</p>
+
+<p>delete from&lt;表名&gt;[where&hellip;]</p>
+
+<h4 id="空值处理">空值处理</h4>
+
+<p>判断：is null\is not null</p>
+
+<p>当where和having遇到null值时当false处理，即不被输出任何结果</p>
+
+<p>exist排外，哪怕值为null也可视作true来处理</p>
+
+<h2 id="视图">视图</h2>
+
+<h3 id="定义-7">定义：</h3>
+
+<p>create view&lt;视图名&gt;[(&lt;列名&gt;)]</p>
+
+<p>as &lt;子查询&gt;</p>
+
+<p>[with check option]</p>
+
+<h3 id="行列子集视图">行列子集视图：</h3>
+
+<p>视图的属性列中存在为基本表的主码属性</p>
+
+<p>drop view&lt;视图名&gt;[cascade]</p>
+
+<h3 id="视图消解">视图消解：</h3>
+
+<p>通过对视图转换成等级的对基本表查询——但涵盖聚集函数的视图不可被消解</p>
+
+<p>update &lt;视图名&gt;</p>
+
+<p>set &lt;列名&gt;&lt;值&gt;</p>
+
+<p>[where&hellip;]</p>
+
+<h3 id="视图作用">视图作用：</h3>
+
+<p>1.简化用户的操作</p>
+
+<p>2.使用户能多角度看待同一数据</p>
+
+<p>3.对重构数据库提供一定程度的逻辑独立性</p>
+
+<p>4.对机密数据提供安全保护</p>
+
+<p>5.更清晰地表达查询</p>
+
+<p>查询处理</p>
+
+<h2 id="查询分析">查询分析</h2>
+
+<p>判读语句是否符合SQL语法规则</p>
+
+<h2 id="查询检查">查询检查</h2>
+
+<p>进行语义检查（语法树）</p>
+
+<h2 id="查询优化">查询优化</h2>
+
+<p>代数优化、物理优化</p>
+
+<h2 id="查询执行">查询执行</h2>
+
+<p>代码生成器</p>
+
+<h1 id="查询操作">查询操作</h1>
+
+<h2 id="选择操作">选择操作</h2>
+
+<p>①简单的全表扫描法②索引扫描</p>
+
+<h2 id="连接操作">连接操作</h2>
+
+<p>①嵌套循环（类比笛卡尔积）②排序-合并（等值连接）③索引连接④hash join</p>
+
+<h1 id="查询优化-1">查询优化</h1>
+
+<h2 id="代数优化">代数优化</h2>
+
+<p>十一准则：</p>
+
+<p>①连接、笛卡尔积交换</p>
+
+<p>②连接、笛卡尔积结合</p>
+
+<p>③投影的串接（前提为：外层投影条件须为内层投影的子集）</p>
+
+<p>④选择的串接（两个选择操作可以合并为一个条件做选择）</p>
+
+<p>⑤选择与投影操作的交换（选择的条件只可涉及投影条件）</p>
+
+<p>⑥选择与笛卡尔积的交换（前提为选择中所涉及的属性均为要合并操作的笛卡尔积的属性）</p>
+
+<p>⑦选择与并的分配律（若两选择有相同的属性名则可以拆分）</p>
+
+<p>⑧选择与差</p>
+
+<p>⑨选择对自然连接的分配律</p>
+
+<p>⑩投影与笛卡尔积的分配律（分开操作的属性所属必须一致）</p>
+
+<p>十一投影与并分配律：两集合有相同的属性集</p>
+
+<p>启发式优化：</p>
+
+<p>①选择运算应尽可能先做</p>
+
+<p>②把投影运算和选择运算同时进行</p>
+
+<p>③把投影同其前或后的双目运算结合</p>
+
+<p>④选择同前面要执行的笛卡尔积结合起来为一个连接运算</p>
+
+<p>⑤找出公共子表达式</p>
+
+<h2 id="物理优化">物理优化</h2>
+
+<p>选择操作的启发式优化：</p>
+
+<p>①“主码=值”——主码索引</p>
+
+<p>②“非主属性=值”，元祖数目&lt;10%——索引扫描，否则全盘扫描</p>
+
+<p>③and操作的优先采用组合索引扫描方法</p>
+
+<p>④or操作的优先采用全表顺序扫描</p>
+
+<p>连接操作的启发式规则：</p>
+
+<p>①若两表——排序—合并算法</p>
+
+<p>②有索引，索引连接算法</p>
+
+<p>③均不适用以上两个，且有个表较小——hash join</p>
+
+<p>④最后采用嵌套循环（小外大内）</p>
+
+<p>代价估算：</p>
+
+<p>1.统计信息：</p>
+
+<p>①基本表——元祖总数N、元祖长度L、占用的块数B、占用的溢出块数BO</p>
+
+<p>②列——列不同值个数m、最大值、最小值、索引相关信息</p>
+
+<p>③总索引信息</p>
+
+<p>2.代价估算示例：</p>
+
+<p>①全表：单位B块——cost=B;“码=值”——cost=B/2</p>
+
+<p>②索引扫描：B+——cost=L+1；非码——cost=L+S(重复性元祖);若为比较元祖——平均cost=L+Y/2+B/2</p>
+
+<p>③嵌套循环代价：cost=Br+BrBs/(K-1)</p>
+
+<p>④排序-合并连接（有序）cost=Br+Bs+(Frs连接选择率)*Nr*Ns/Mrs</p>
+
+</div>
+<div class="d-flex flex-row justify-content-center">
+  <h3 class="mb-1 mt-1 text-left mr-4">
+    
+    <i class="nav-menu-disabled fas fa-chevron-circle-left"></i>
+    
+  </h3>
+  <h3 class="mb-1 mt-1 text-left ml-4">
+    
+    <a
+      href="/blog/test/"
+      title="Test"
+    >
+      <i class="nav-menu fas fa-chevron-circle-right"></i>
+    </a>
+    
+  </h3>
+</div>
+
+
+    </main>
+    
+    <footer class=" mt-2 mb-4 text-center ">
+  <span class="markdownify"></span>
+  <span style="font-size:0px;">
+    &middot;
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </span>
+</footer>
+
+    
+  </body>
+</html>
