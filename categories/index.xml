@@ -6,7 +6,7 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 23 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Apr 2021 19:50:24 +0800</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>aliquam auctor</title>
       <link>/categories/aliquam-auctor/</link>
-      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 21 Apr 2021 19:50:24 +0800</pubDate>
       
       <guid>/categories/aliquam-auctor/</guid>
       <description></description>
@@ -23,45 +23,9 @@
     <item>
       <title>do</title>
       <link>/categories/do/</link>
-      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 21 Apr 2021 19:50:24 +0800</pubDate>
       
       <guid>/categories/do/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>facilisi odio</title>
-      <link>/categories/facilisi-odio/</link>
-      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/facilisi-odio/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>id</title>
-      <link>/categories/id/</link>
-      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/id/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>diam aliqua</title>
-      <link>/categories/diam-aliqua/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/diam-aliqua/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fringilla</title>
-      <link>/categories/fringilla/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/fringilla/</guid>
       <description></description>
     </item>
     

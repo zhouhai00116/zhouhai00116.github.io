@@ -6,18 +6,18 @@
     <description>Recent content in velit on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 23 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Apr 2021 19:50:24 +0800</lastBuildDate>
     
 	<atom:link href="/tags/velit/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>vestibulum vitae dictum aliqua phasellus magnis at</title>
-      <link>/blog/post_1/</link>
-      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      <title>Test</title>
+      <link>/blog/test/</link>
+      <pubDate>Wed, 21 Apr 2021 19:50:24 +0800</pubDate>
       
-      <guid>/blog/post_1/</guid>
-      <description>eu velit magna aliqua hendrerit Cursus non odio nam suspendisse mollis tempus tincidunt, cursus praesent facilisi elementum etiam rhoncus tempor. At penatibus ultrices nulla phasellus mi quis luctus felis ultricies. Urna tempus ac consequat sem sed curabitur justo, quam suspendisse cursus aenean integer tellus consectetur. Sed bibendum hendrerit volutpat fames libero nisl dui, nunc vivamus augue posuere luctus scelerisque ultrices. Do pretium consectetur vestibulum lacinia eget do semper, varius viverra scelerisque madssa semper venenatis cras.</description>
+      <guid>/blog/test/</guid>
+      <description></description>
     </item>
     
   </channel>
