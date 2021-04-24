@@ -61,14 +61,9 @@
   </h3>
 </div>
 
-<h1 class="standard top-h1 mb-3">My Blog</h1>
-<div class="standard grid-container">
-  
-  <div class="index-box p-3 shadow rounded mb-4">
-    <h3>
-      <a href="/blog/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Git学习笔记</a>
-    </h3>
-    <p>Reading Time: 1 minutes</p><div class="mb-2">
+<div class="rounded p-2 aafu-border border">
+  <div class="border-bottom aafu-border">
+    <h1 class="top-h1" style="font-size: 2.75em;">Git学习笔记</h1><div class="mb-2">
   <p class="mb-1">April 24, 2021</p>
    
   
@@ -104,116 +99,122 @@
 </div>
 </div>
   
-  <div class="index-box p-3 shadow rounded mb-4">
-    <h3>
-      <a href="/blog/%E6%8C%AA%E5%A8%81%E7%9A%84%E6%A3%AE%E6%9E%97%E8%AF%AD%E5%8F%A5%E6%91%98%E6%8A%84%E4%B8%8E%E8%AF%BB%E5%90%8E%E6%84%9F/">挪威的森林语句摘抄与读后感</a>
-    </h3>
-    <p>Reading Time: 1 minutes</p><div class="mb-2">
-  <p class="mb-1">April 23, 2021</p>
-   
-  
-  <p class="metadata-value mb-1 taxa taxa-container-div list-categories">
-    Categories: 
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/categories/%E4%B9%A6%E7%B1%8D"
-      title="categories"
-    >书籍</a>
-    
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/categories/%E6%8C%AA%E5%A8%81%E7%9A%84%E6%A3%AE%E6%9E%97"
-      title="categories"
-    >挪威的森林</a>
-    
-  </p>
-  
-  
-  
-  <p class="metadata-value mb-1 taxa taxa-container-div list-tags">
-    Tags: 
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/tags/%E6%91%98%E6%8A%84"
-      title="tags"
-    >摘抄</a>
-    
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/tags/%E8%AF%BB%E5%90%8E%E6%84%9F"
-      title="tags"
-    >读后感</a>
-    
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/tags/%E7%88%B1%E6%83%85"
-      title="tags"
-    >爱情</a>
-    
-  </p>
-  
-  
-</div>
-</div>
-  
-  <div class="index-box p-3 shadow rounded mb-4">
-    <h3>
-      <a href="/blog/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E8%AF%95%E7%AC%94%E8%AE%B0/">数据库复试笔记</a>
-    </h3>
-    <p>Reading Time: 3 minutes</p><div class="mb-2">
-  <p class="mb-1">April 22, 2021</p>
-   
-  
-  <p class="metadata-value mb-1 taxa taxa-container-div list-categories">
-    Categories: 
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/categories/%E8%80%83%E7%A0%94"
-      title="categories"
-    >考研</a>
-    
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93"
-      title="categories"
-    >数据库</a>
-    
-  </p>
-  
-  
-  
-  <p class="metadata-value mb-1 taxa taxa-container-div list-tags">
-    Tags: 
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/tags/%E8%80%83%E7%A0%94"
-      title="tags"
-    >考研</a>
-    
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93"
-      title="tags"
-    >数据库</a>
-    
-    <a
-      class="pl-1 pr-1 rounded border border-secondary"
-      href="/tags/%E7%AC%94%E8%AE%B0"
-      title="tags"
-    >笔记</a>
-    
-  </p>
-  
-  
-</div>
-</div>
-  
-</div>
-<div class="mt-4 d-flex justify-content-center">
-  
 
+<h1 id="什么是git">什么是Git？</h1>
+
+<p>一种分布式版本控制的工具，利于多人联合开发。</p>
+
+<h2 id="协同修改">协同修改</h2>
+
+<p>多人并行不孛的修改服务器端的同一个文件</p>
+
+<h2 id="数据备份">数据备份</h2>
+
+<p>不仅保持目录和文件的当前状态，还能够保持每一个提交过的历史状态</p>
+
+<h2 id="版本管理">版本管理</h2>
+
+<p>在保持每一个版本的文件信息的时候要做到不保持重复数据，以节约存储空间，提供运行效率。这方面SVN采用的是增量式管理方法，而Git采用文件系统快照的方式。</p>
+
+<h2 id="权限控制">权限控制</h2>
+
+<p>对团队中参与开发的人员进行权限控制。</p>
+
+<p>对团队外开发者贡献的代码进行审核——Git独有。</p>
+
+<h1 id="git优势">Git优势</h1>
+
+<p>1.大部分操作在本地完成，不需要联网</p>
+
+<p>2.完整性保证</p>
+
+<p>3.尽可能添加数据而不是删除或修改数据</p>
+
+<p>4.分支操作非常快捷流畅</p>
+
+<p>5.与Linux命令全面兼容</p>
+
+<h1 id="git基本结构">Git基本结构</h1>
+
+<h2 id="工作区">工作区</h2>
+
+<p>git add</p>
+
+<h2 id="暂存区">暂存区</h2>
+
+<p>git commit</p>
+
+<h2 id="本地库">本地库</h2>
+
+<h1 id="git和代码托管中心">Git和代码托管中心</h1>
+
+<h2 id="任务-维护远程库">任务——维护远程库</h2>
+
+<h2 id="局域网">局域网</h2>
+
+<p>GitLab服务器</p>
+
+<h2 id="外网环境下">外网环境下</h2>
+
+<p>GitHub、码云</p>
+
+<h2 id="团队内">团队内</h2>
+
+<p>push、clone、push（团队加入）、pull</p>
+
+<h2 id="团队外">团队外</h2>
+
+<p>fork复制远程库（此远程库所属者为fork对象）、clone、push</p>
+
+<p>pull request、审核、merge——提交给原远程库创建者进行审核，并手动合并</p>
+
+<h1 id="git基本指令">Git基本指令</h1>
+
+<h2 id="初始化">初始化</h2>
+
+<p>git init</p>
+
+<h2 id="设置签名">设置签名</h2>
+
+<h3 id="项目级别-仓库级别">项目级别/仓库级别</h3>
+
+<p>git config [user.name xx/user. email xx]</p>
+
+<p>存储位置：./.git/config</p>
+
+<h3 id="系统用户级别">系统用户级别</h3>
+
+<p>git config global [user.name xx/user. email xx]——就近原则判决</p>
+
+<p>存储位置：cat ~/.gitconfig(cat ~为系统用户文件夹,Linux语法)</p>
+
+<h2 id="暂存区-1">暂存区</h2>
+
+<p>添加:git add xx/./-A</p>
+
+<p>退回：git rm &ndash;cached xx/./-A</p>
+
+<p>修改：git add可修改;git checkout &ndash;xx可退回修改；当修改添加后可git reset head x回退</p>
 
 </div>
+<div class="d-flex flex-row justify-content-center">
+  <h3 class="mb-1 mt-1 text-left mr-4">
+    
+    <a
+      href="/blog/%E6%8C%AA%E5%A8%81%E7%9A%84%E6%A3%AE%E6%9E%97%E8%AF%AD%E5%8F%A5%E6%91%98%E6%8A%84%E4%B8%8E%E8%AF%BB%E5%90%8E%E6%84%9F/"
+      title="挪威的森林语句摘抄与读后感"
+    >
+      <i class="nav-menu fas fa-chevron-circle-left"></i>
+    </a>
+    
+  </h3>
+  <h3 class="mb-1 mt-1 text-left ml-4">
+    
+    <i class="nav-menu-disabled fas fa-chevron-circle-right"></i>
+    
+  </h3>
+</div>
+
 
     </main>
     

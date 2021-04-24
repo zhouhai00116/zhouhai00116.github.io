@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub on </title>
+    <link>/categories/github/</link>
+    <description>Recent content in GitHub on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 24 Apr 2021 14:34:11 +0800</lastBuildDate>
+    
+	<atom:link href="/categories/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git学习笔记</title>
+      <link>/blog/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 24 Apr 2021 14:34:11 +0800</pubDate>
+      
+      <guid>/blog/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>什么是Git？ 一种分布式版本控制的工具，利于多人联合开发。
+协同修改 多人并行不孛的修改服务器端的同一个文件
+数据备份 不仅保持目录和文件的当前状态，还能够保持每一个提交过的历史状态
+版本管理 在保持每一个版本的文件信息的时候要做到不保持重复数据，以节约存储空间，提供运行效率。这方面SVN采用的是增量式管理方法，而Git采用文件系统快照的方式。
+权限控制 对团队中参与开发的人员进行权限控制。
+对团队外开发者贡献的代码进行审核——Git独有。
+Git优势 1.大部分操作在本地完成，不需要联网
+2.完整性保证
+3.尽可能添加数据而不是删除或修改数据
+4.分支操作非常快捷流畅
+5.与Linux命令全面兼容
+Git基本结构 工作区 git add
+暂存区 git commit
+本地库 Git和代码托管中心 任务——维护远程库 局域网 GitLab服务器
+外网环境下 GitHub、码云
+团队内 push、clone、push（团队加入）、pull
+团队外 fork复制远程库（此远程库所属者为fork对象）、clone、push
+pull request、审核、merge——提交给原远程库创建者进行审核，并手动合并
+Git基本指令 初始化 git init
+设置签名 项目级别/仓库级别 git config [user.name xx/user. email xx]
+存储位置：./.git/config
+系统用户级别 git config global [user.name xx/user. email xx]——就近原则判决
+存储位置：cat ~/.gitconfig(cat ~为系统用户文件夹,Linux语法)
+暂存区 添加:git add xx/./-A
+退回：git rm &amp;ndash;cached xx/./-A</description>
+    </item>
+    
+  </channel>
+</rss>
