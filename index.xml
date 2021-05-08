@@ -6,10 +6,47 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 25 Apr 2021 08:17:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 08 May 2021 14:28:15 +0800</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>五一假期记录</title>
+      <link>/blog/%E4%BA%94%E4%B8%80%E5%81%87%E6%9C%9F%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 08 May 2021 14:28:15 +0800</pubDate>
+      
+      <guid>/blog/%E4%BA%94%E4%B8%80%E5%81%87%E6%9C%9F%E8%AE%B0%E5%BD%95/</guid>
+      <description> Range 2021-4-28~2021-5-1
+People 周海、雷天祥、王胜、李俊图
+Area 山西晋中平遥古城、山西临汾壶口瀑布
+Cost 1300元
+4.28 出发时间: 早上8点半
+火车： 呼和浩特东——大同
+大同——太原
+太原——平遥古城
+住宿： 德唯一民宿
+景点： 平遥古城南大街
+美食： 洪武纪美食店：栲栳栳、桂花红米糕、焖面、莜面等
+4.29 景点（平遥古城）： 衙门、平遥古城墙、清虚观、日升昌、同兴镖局、城隍庙
+美食： 晋升沪食铺、烧烤
+4.30 交通：平遥古城——临汾；临汾——壶口瀑布
+景点：壶口瀑布
+美食：焖鸡
+5.1 景点：汾河公园、临汾博物馆
+美食（好像不算诶）：面包、泡面
+交通：临汾——呼和浩特
+图片集 &amp;lt;image src=&amp;quot;images/1.jpg&amp;quot;&amp;gt;&amp;lt;/image&amp;gt;  </description>
+    </item>
+    
+    <item>
+      <title>Linux基础学习笔记</title>
+      <link>/blog/linux%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 26 Apr 2021 16:07:56 +0800</pubDate>
+      
+      <guid>/blog/linux%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Linux</description>
+    </item>
     
     <item>
       <title>机器学习学习笔记</title>

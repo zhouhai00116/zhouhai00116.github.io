@@ -6,10 +6,46 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 25 Apr 2021 08:17:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 08 May 2021 14:28:15 +0800</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Holiday</title>
+      <link>/categories/holiday/</link>
+      <pubDate>Sat, 08 May 2021 14:28:15 +0800</pubDate>
+      
+      <guid>/categories/holiday/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>五一</title>
+      <link>/categories/%E4%BA%94%E4%B8%80/</link>
+      <pubDate>Sat, 08 May 2021 14:28:15 +0800</pubDate>
+      
+      <guid>/categories/%E4%BA%94%E4%B8%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>/categories/linux/</link>
+      <pubDate>Mon, 26 Apr 2021 16:07:56 +0800</pubDate>
+      
+      <guid>/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unix</title>
+      <link>/categories/unix/</link>
+      <pubDate>Mon, 26 Apr 2021 16:07:56 +0800</pubDate>
+      
+      <guid>/categories/unix/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>人工智能</title>
